@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MadlaArt grafický designer</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="img/madla_favicon.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="nav-wrapper container">
+      <div class="logo" aria-label="Logo MadlaArt">
+       <a href="#hero"><img src="img/MadlaArt_logo.png" alt="logo MadlaArt"></a>
+      </div>
+      <nav class="desktop-menu" role="navigation" aria-label="Hlavní menu">
+        <a href="#hero" class="menu-link">Domů</a>
+        <a href="#about" class="menu-link">O mně</a>
+        <a href="#portfolio" class="menu-link">Portfolio</a>
+        <a href="#contact" class="menu-link">Kontakt</a>
+        <div class="social-icons" aria-label="Sociální sítě">
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </nav>
+      <div class="hamburger" role="button" aria-label="Otevřít menu" tabindex="0" aria-expanded="false">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- Mobilní menu -->
+    <nav class="mobile-menu" role="navigation" aria-label="Mobilní menu">
+      <a href="#hero" class="menu-link">Domů</a>
+      <a href="#about" class="menu-link">O mně</a>
+      <a href="#portfolio" class="menu-link">Portfolio</a>
+      <a href="#contact" class="menu-link">Kontakt</a>
+      <div class="social-icons" aria-label="Sociální sítě">
+        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="hero" aria-label="Úvodní sekce">
+      <h1>MadlaArt</h1>
+      <p>grafický designer</p>
+      <button class="button"onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Napište mi</button>
+    </section>
+
+    <section id="about" aria-label="O mně">
+      <h2>O mně</h2>
+      <p>Jsem Magda – grafická designérka a začínající frontend vývojářka, která miluje jednoduchost, funkční krásu a
+        dobrý kód. Navrhuji čisté, moderní vizuály a učím se přetvářet je do živých, responzivních webů.
+        Mám cit pro typografii, barvy a detail. Ráda tvořím věci, které dávají smysl – od loga přes tiskoviny až po celý
+        web.
+        Baví mě hledat rovnováhu mezi estetikou a funkčností. Neustále se učím a posouvám dál – teď hlavně v oblasti
+        JavaScriptu, HTML/CSS a návrhu uživatelského rozhraní.
+
+        Kromě designu mám slabost pro knihy, kávu, deskovky a psaní příběhů.</p>
+    </section>
+
+    <section id="portfolio" aria-label="Portfolio projektů">
+      <h2>Portfolio</h2>
+      <div class="projects-grid">
+        <div class="project" tabindex="0">
+          <img src="img/logo_nettie_blue.png" alt="Nettie Pohodová kavárna" />
+          <div class="project-description">Nettie - pohodová kavárna</div>
+          <div class="btn"><a href="nettie.html">Více o projektu</a></div>
+        </div>
+        <div class="project" tabindex="1">
+          <img src="img/jarmanka_logo.png" alt="Projekt 2" />
+          <div class="project-description">Jarmanka - přírodní kosmetika</div>
+          <div class="btn"><a href="jarmanka.html">Více o projektu</a></div>
+        </div>
+        <div class="project" tabindex="2">
+          <img src="img/logo_rgb_kruh.png" alt="Beauty Luxury" />
+          <div class="project-description">Beauty Luxury - kosmetické studio</div>
+          <div class="btn"><a href="beautyluxury.html">Více o projektu</a></div>
+        </div>
+      </div>
+    </section>
+    <section id="reviews" aria-label="Recenze zákazníků">
+  <h2>Recenze</h2>
+  <div class="reviews-container">
+    <div class="review">
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0pKVnTFsod71hJbgyaL29Xg7RgfhbBzFnh5r2FyT4ygJEyXq4qs1PFHkLbpms6iSFl%26id%3D100089202709395&show_text=true&width=500" height="247" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+
+    <div class="review">
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fzdenka.seidlova.7%2Fposts%2Fpfbid0DeB5LivVqZcqjAXtcM1PSG7dFsytN3D1nEGSYFvt9qZeSrzVFstKJcxfTaTAKLGWl&show_text=true&width=500" height="189" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+
+    <div class="review">
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FBeautyLuxurySalon%2Fposts%2Fpfbid02DYAdpMWjM1D7W2gn91xZQNFMvS539ecZiR76q4xppAZrzw5pezDLCiyxcSaiVPpUl&show_text=true&width=500" height="220" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+  </div>
+</section>
+
+
+</section>
+
+    <section id="contact" aria-label="Kontaktní formulář">
+      <h2>Kontakt</h2>
+      <form id="contact-form" novalidate>
+        <input type="text" id="name" name="name" placeholder="Jméno" required minlength="2" />
+        <input type="email" id="email" name="email" placeholder="E-mail" required />
+        <textarea id="message" name="message" rows="5" placeholder="Zpráva" required minlength="10"></textarea>
+        <button type="submit">Odeslat</button>
+        <div id="form-message" role="alert" aria-live="polite"></div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 MadlaArt. Všechna práva vyhrazena.
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

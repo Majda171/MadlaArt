@@ -1,0 +1,468 @@
+ /* Reset a základ */
+ :root {
+   --violete: #1a1a1a;
+   --green: #8CC697;
+   --bg: #F2F2F2;
+   --white: #fff;
+   --text: #1a1a1a;
+ }
+
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+
+ body {
+   margin: 0;
+   font-family: 'Poppins', sans-serif;
+   background: var(--bg);
+   color: #1A1A1A;
+   scroll-behavior: smooth;
+ }
+
+ a {
+   color: var(--green);
+   text-decoration: none;
+   transition: color 0.3s;
+ }
+
+ a:hover,
+ a:focus {
+   color: var(--violete);
+ }
+
+ /* Container */
+ .container {
+   max-width: 960px;
+   margin: 0 auto;
+   padding: 0 20px;
+ }
+
+ /* Header a menu */
+ header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   background: var(--white);
+   border-bottom: 1px solid #ddd;
+   z-index: 1000;
+ }
+
+ .nav-wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 10px 20px;
+ }
+
+ /* Logo placeholder */
+ .logo {
+   max-width: 50%;
+ }
+
+ .logo a img {
+   max-width: 30%;
+ }
+
+ /* Menu položky */
+ nav {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   width: 50%;
+ }
+
+ nav a.menu-link {
+   font-weight: 600;
+   font-size: 1rem;
+   cursor: pointer;
+   position: relative;
+ }
+
+ nav a.menu-link::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: -5px;
+   width: 0;
+   height: 2px;
+   background: var(--green);
+   transition: width 0.3s;
+ }
+
+ nav a.menu-link:hover::after,
+ nav a.menu-link:focus::after {
+   width: 100%;
+ }
+
+ /* Ikony sociálních sítí */
+ .social-icons {
+   display: flex;
+   gap: 12px;
+ }
+
+ .social-icons a {
+   color: var(--text);
+   font-size: 1.3rem;
+   transition: color 0.3s;
+ }
+
+ .social-icons a:hover,
+ .social-icons a:focus {
+   color: var(--green);
+ }
+
+ /* Hamburger menu (mobil) */
+ .hamburger {
+   display: none;
+   flex-direction: column;
+   gap: 5px;
+   cursor: pointer;
+ }
+
+ .hamburger div {
+   width: 25px;
+   height: 3px;
+   background: var(--text);
+   border-radius: 2px;
+   transition: all 0.3s ease;
+ }
+
+ /* Aktivní hamburger */
+ .hamburger.active div:nth-child(1) {
+   transform: rotate(45deg) translate(5px, 5px);
+ }
+
+ .hamburger.active div:nth-child(2) {
+   opacity: 0;
+ }
+
+ .hamburger.active div:nth-child(3) {
+   transform: rotate(-45deg) translate(5px, -5px);
+ }
+
+ /* Skryté menu mobil */
+ nav.mobile-menu {
+   display: none;
+   flex-direction: column;
+   gap: 20px;
+   background: var(--white);
+   position: fixed;
+   top: 50px;
+   right: 0;
+   left: 0;
+   padding: 20px;
+   border-bottom: 1px solid #ddd;
+   z-index: 999;
+ }
+
+ nav.mobile-menu.open {
+   display: flex;
+ }
+
+ /* Sekce */
+ section {
+   padding: 100px 0 60px;
+   position: relative;
+ }
+
+ /* Hero sekce */
+ #hero {
+   background: var(--white);
+   color: #1A1A1A;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   min-height: 90vh;
+   text-align: center;
+   padding: 0 20px;
+   position: relative;
+   overflow: hidden;
+ }
+
+ #hero h1 {
+   font-weight: 800;
+   font-size: clamp(2.5rem, 8vw, 4.5rem);
+   margin-bottom: 20px;
+   letter-spacing: 0.1em;
+
+ }
+
+ #hero p {
+   font-weight: 500;
+   font-size: clamp(1rem, 3vw, 1.5rem);
+   color: var(--text);
+   margin-top: 0;
+   margin-bottom: 20px;
+ }
+
+ .button {
+   background: var(--green);
+   border: none;
+   color: var(--white);
+   font-weight: 600;
+   padding: 14px 32px;
+   font-size: 1.1rem;
+   border-radius: 8px;
+   cursor: pointer;
+   box-shadow: 0 5px 15px rgba(168, 213, 186, 0.4);
+   transition: background-color 0.3s ease, transform 0.2s ease;
+ }
+
+ #hero button:hover,
+ #hero button:focus {
+   background: var(--violete);
+   transform: scale(1.05);
+ }
+
+ /* O mně */
+ #about {
+   background: var(--bg);
+   color: var(--text);
+   max-width: 720px;
+   margin: 0 auto;
+   text-align: center;
+   position: relative;
+   z-index: 1;
+ }
+
+ #about h2 {
+   font-weight: 700;
+   font-size: 2rem;
+   margin-bottom: 20px;
+   letter-spacing: 0.05em;
+ }
+
+ #about p {
+   font-weight: 400;
+   font-size: 1.1rem;
+   color: #4A4A4A;
+   line-height: 1.6;
+ }
+
+ /* Portfolio */
+ #portfolio {
+   background: var(--white);
+   position: relative;
+   z-index: 1;
+   max-width: 960px;
+   margin: 0 auto;
+   padding: 60px 20px 20px;
+   text-align: center;
+ }
+
+ #portfolio h2 {
+   font-weight: 700;
+   font-size: 2rem;
+   margin-bottom: 40px;
+   letter-spacing: 0.05em;
+ }
+
+ .projects-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 24px;
+ }
+
+ .project {
+   background: var(--bg);
+   border-radius: 12px;
+   padding: 12px;
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+   cursor: pointer;
+   transition: box-shadow 0.3s ease;
+   overflow: hidden;
+ }
+
+ .project:hover,
+ .project:focus-within {
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+ }
+
+ .project img {
+   width: 100%;
+   border-radius: 10px;
+   display: block;
+   height: auto;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+   filter: grayscale(100%);
+   transition: filter 0.4s ease, transform 0.3s ease;
+ }
+
+ .project img:hover {
+   filter: grayscale(0%);
+   transform: scale(1.05);
+ }
+
+ .project-description {
+   margin: 15px;
+   font-size: 0.95rem;
+   color: var(--text);
+   font-weight: 800;
+ }
+
+ .btn {
+   background: var(--green);
+   border: none;
+   font-weight: 600;
+   padding: 14px 32px;
+   font-size: 1.1rem;
+   border-radius: 8px;
+   cursor: pointer;
+   box-shadow: 0 5px 15px rgba(168, 213, 186, 0.4);
+ }
+
+ .btn a {
+   color: var(--white);
+ }
+
+ /*Recenze*/
+#reviews {
+  background: var(--bg);
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 20px 20px;
+  text-align: center;
+}
+
+#reviews h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  letter-spacing: 0.05em;
+}
+
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.review {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.review iframe {
+  width: 100%;
+}
+
+
+
+ /* Kontakt */
+ #contact {
+   background: var(--white);
+   max-width: 720px;
+   margin: 0 auto 100px;
+   padding: 20px;
+   text-align: center;
+   position: relative;
+   z-index: 1;
+ }
+
+ #contact h2 {
+   font-weight: 700;
+   font-size: 2rem;
+   margin-bottom: 20px;
+   letter-spacing: 0.05em;
+ }
+
+ #contact form {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   margin-top: 20px;
+ }
+
+ #contact input,
+ #contact textarea {
+   padding: 12px 16px;
+   border: 2px solid var(--green);
+   border-radius: 8px;
+   font-size: 1rem;
+   font-family: 'Inter', sans-serif;
+   resize: none;
+   transition: border-color 0.3s;
+ }
+
+ #contact input:focus,
+ #contact textarea:focus {
+   outline: none;
+   border-color: var(--violete);
+ }
+
+ #contact button {
+   background: var(--violete);
+   border: none;
+   color: var(--white);
+   font-weight: 700;
+   padding: 14px 32px;
+   font-size: 1.1rem;
+   border-radius: 8px;
+   cursor: pointer;
+   box-shadow: 0 5px 15px rgba(163, 155, 168, 0.4);
+   transition: background-color 0.3s ease, transform 0.2s ease;
+ }
+
+ #contact button:hover,
+ #contact button:focus {
+   background: var(--green);
+   transform: scale(1.05);
+ }
+
+ /* Validace */
+ .error {
+   border-color: #E07171 !important;
+ }
+
+ .success-message {
+   color: #4BB543;
+   font-weight: 600;
+   margin-top: 10px;
+ }
+
+ /* Footer */
+ footer {
+   text-align: center;
+   padding: 15px 20px;
+   font-size: 0.9rem;
+   color: var(--violete);
+   background: var(--white);
+   border-top: 1px solid #ddd;
+ }
+
+ /* Media queries */
+ @media (max-width: 1000px) {
+
+   #hero {
+     background-size: cover;
+   }
+
+ }
+
+ @media (max-width: 768px) {
+   nav:not(.mobile-menu) {
+     display: none;
+   }
+
+   .hamburger {
+     display: flex;
+   }
+
+   section {
+     padding: 80px 20px 40px;
+   }
+
+   #hero {
+     background-size: cover;
+   }
+
+ }
