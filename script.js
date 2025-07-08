@@ -90,15 +90,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Blob animation
-  const blobs = document.querySelectorAll('.blob');
-  blobs.forEach(blob => {
-    let angle = 0;
-    function animate() {
-      angle += 0.01;
-      blob.style.transform = `translate(${Math.sin(angle) * 10}px, ${Math.cos(angle) * 10}px)`;
-      requestAnimationFrame(animate);
-    }
-    animate();
-  });
-});
+  
