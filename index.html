@@ -17,7 +17,7 @@
   <header>
     <div class="nav-wrapper container">
       <div class="logo" aria-label="Logo MadlaArt">
-       <a href="#hero"><img src="img/MadlaArt_logo.png" alt="logo MadlaArt"></a>
+        <a href="#hero"><img src="img/MadlaArt_logo.png" alt="logo MadlaArt"></a>
       </div>
       <nav class="desktop-menu" role="navigation" aria-label="Hlavní menu">
         <a href="#hero" class="menu-link">Domů</a>
@@ -62,7 +62,8 @@
     <section id="hero" aria-label="Úvodní sekce">
       <h1>MadlaArt</h1>
       <p>grafický designer</p>
-      <button class="button"onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Napište mi</button>
+      <button class="button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Napište
+        mi</button>
     </section>
 
     <section id="about" aria-label="O mně">
@@ -98,28 +99,37 @@
       </div>
     </section>
     <section id="reviews" aria-label="Recenze zákazníků">
-  <h2>Recenze</h2>
-  <div class="reviews-container">
-    <div class="review">
-      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0pKVnTFsod71hJbgyaL29Xg7RgfhbBzFnh5r2FyT4ygJEyXq4qs1PFHkLbpms6iSFl%26id%3D100089202709395&show_text=true&width=500" height="247" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    </div>
+      <h2>Recenze</h2>
+      <div class="reviews-container">
+        <div class="review">
+          <iframe
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0pKVnTFsod71hJbgyaL29Xg7RgfhbBzFnh5r2FyT4ygJEyXq4qs1PFHkLbpms6iSFl%26id%3D100089202709395&show_text=true&width=500"
+            height="247" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
 
-    <div class="review">
-      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fzdenka.seidlova.7%2Fposts%2Fpfbid0DeB5LivVqZcqjAXtcM1PSG7dFsytN3D1nEGSYFvt9qZeSrzVFstKJcxfTaTAKLGWl&show_text=true&width=500" height="189" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    </div>
+        <div class="review">
+          <iframe
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fzdenka.seidlova.7%2Fposts%2Fpfbid0DeB5LivVqZcqjAXtcM1PSG7dFsytN3D1nEGSYFvt9qZeSrzVFstKJcxfTaTAKLGWl&show_text=true&width=500"
+            height="189" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
 
-    <div class="review">
-      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FBeautyLuxurySalon%2Fposts%2Fpfbid02DYAdpMWjM1D7W2gn91xZQNFMvS539ecZiR76q4xppAZrzw5pezDLCiyxcSaiVPpUl&show_text=true&width=500" height="220" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    </div>
-  </div>
-</section>
+        <div class="review">
+          <iframe
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FBeautyLuxurySalon%2Fposts%2Fpfbid02DYAdpMWjM1D7W2gn91xZQNFMvS539ecZiR76q4xppAZrzw5pezDLCiyxcSaiVPpUl&show_text=true&width=500"
+            height="220" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+      </div>
+    </section>
 
 
-</section>
+    </section>
 
     <section id="contact" aria-label="Kontaktní formulář">
       <h2>Kontakt</h2>
-      <form id="contact-form" novalidate>
+      <form id="contact-form" action="https://formspree.io/f/TVUJ_KOD" method="POST" novalidate>
         <input type="text" id="name" name="name" placeholder="Jméno" required minlength="2" />
         <input type="email" id="email" name="email" placeholder="E-mail" required />
         <textarea id="message" name="message" rows="5" placeholder="Zpráva" required minlength="10"></textarea>
