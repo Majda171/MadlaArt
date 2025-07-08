@@ -15,53 +15,35 @@
     }
   });
 
-  // Simple form validation and submission simulation
-  const form = document.getElementById('contact-form');
-  const formMessage = document.getElementById('form-message');
+  if (valid) {
+  const formData = new FormData(form);
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    let valid = true;
-    formMessage.textContent = '';
-
-    // Validate name
-    const name = form.name;
-    if (!name.value || name.value.length < 2) {
-      name.classList.add('error');
-      valid = false;
-    } else {
-      name.classList.remove('error');
+  fetch('https://formspree.io/f/manjgdop', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
     }
-
-    // Validate email (basic)
-    const email = form.email;
-    const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-    if (!email.value || !emailPattern.test(email.value)) {
-      email.classList.add('error');
-      valid = false;
-    } else {
-      email.classList.remove('error');
-    }
-
-    // Validate message
-    const message = form.message;
-    if (!message.value || message.value.length < 10) {
-      message.classList.add('error');
-      valid = false;
-    } else {
-      message.classList.remove('error');
-    }
-
-    if (valid) {
-      formMessage.textContent = 'Děkuji za zprávu! Ozvu se co nejdříve.';
-      formMessage.classList.add('success-message');
-      form.reset();
-    } else {
-      formMessage.textContent = 'Prosím vyplňte správně všechna pole.';
+  })
+    .then(response => {
+      if (response.ok) {
+        formMessage.textContent = 'Děkuji za zprávu! Ozvu se co nejdříve.';
+        formMessage.classList.add('success-message');
+        form.reset();
+      } else {
+        formMessage.textContent = 'Něco se pokazilo. Zkuste to prosím znovu.';
+        formMessage.classList.remove('success-message');
+      }
+    })
+    .catch(() => {
+      formMessage.textContent = 'Chyba při odesílání. Zkuste to prosím později.';
       formMessage.classList.remove('success-message');
-    }
-  });
+    });
+} else {
+  formMessage.textContent = 'Prosím vyplňte správně všechna pole.';
+  formMessage.classList.remove('success-message');
+}
+
 
   // Mikroanimace blobů - jemný pohyb
   const blobs = document.querySelectorAll('.blob');
