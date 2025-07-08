@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Hamburger menu toggle
+  // HAMBURGER MENU
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Form handling
+  // FORMULÁŘ
   const form = document.getElementById('contact-form');
   const formMessage = document.getElementById('form-message');
 
@@ -30,11 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
       let valid = true;
       formMessage.textContent = '';
 
-      const name = form.name;
-      const email = form.email;
-      const message = form.message;
+      const name = form.querySelector('input[name="name"]');
+      const email = form.querySelector('input[name="email"]');
+      const message = form.querySelector('textarea[name="message"]');
 
-      // Validate name
+      // VALIDACE
       if (!name.value || name.value.length < 2) {
         name.classList.add('error');
         valid = false;
@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         name.classList.remove('error');
       }
 
-      // Validate email
       const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
       if (!email.value || !emailPattern.test(email.value)) {
         email.classList.add('error');
@@ -51,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
         email.classList.remove('error');
       }
 
-      // Validate message
       if (!message.value || message.value.length < 10) {
         message.classList.add('error');
         valid = false;
@@ -59,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         message.classList.remove('error');
       }
 
+      // ODESLÁNÍ
       if (valid) {
         const formData = new FormData(form);
 
@@ -89,5 +88,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
 });
