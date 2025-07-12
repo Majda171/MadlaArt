@@ -401,8 +401,6 @@
    width: 100%;
  }
 
-
-
  /* Kontakt */
  #contact {
    background: var(--white);
@@ -511,4 +509,12 @@
      background-size: cover;
    }
 
+ }
+
+ @media (max-width: 400px) {
+   .hero-content h1 {
+     font-size: 3rem;
+     line-height: 1;
+     margin-bottom: 0.75rem;
+   }
  }
