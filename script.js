@@ -29,14 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let valid = true;
       formMessage.textContent = '';
-      formMessage.classList.remove('success-message', 'error-message');
 
       const name = form.querySelector('input[name="name"]');
       const email = form.querySelector('input[name="email"]');
       const message = form.querySelector('textarea[name="message"]');
 
       // VALIDACE
-      if (!name.value.trim() || name.value.trim().length < 2) {
+      if (!name.value || name.value.length < 2) {
         name.classList.add('error');
         valid = false;
       } else {
@@ -44,14 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-      if (!email.value.trim() || !emailPattern.test(email.value.trim())) {
+      if (!email.value || !emailPattern.test(email.value)) {
         email.classList.add('error');
         valid = false;
       } else {
         email.classList.remove('error');
       }
 
-      if (!message.value.trim() || message.value.trim().length < 10) {
+      if (!message.value || message.value.length < 10) {
         message.classList.add('error');
         valid = false;
       } else {
@@ -76,19 +75,18 @@ document.addEventListener('DOMContentLoaded', () => {
               form.reset();
             } else {
               formMessage.textContent = 'Něco se pokazilo. Zkuste to prosím znovu.';
-              formMessage.classList.add('error-message');
+              formMessage.classList.remove('success-message');
             }
           })
           .catch(() => {
             formMessage.textContent = 'Chyba při odesílání. Zkuste to prosím později.';
-            formMessage.classList.add('error-message');
+            formMessage.classList.remove('success-message');
           });
       } else {
         formMessage.textContent = 'Prosím vyplňte správně všechna pole.';
-        formMessage.classList.add('error-message');
+        formMessage.classList.remove('success-message');
       }
     });
   }
 });
-
 

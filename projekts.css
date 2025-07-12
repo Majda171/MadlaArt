@@ -7,6 +7,7 @@
 
 /* Nadpis projektu */
 .project-detail h1 {
+
   font-size: 2.4rem;
   font-weight: 700;
   margin-top: 120px;
@@ -34,8 +35,6 @@
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
-  will-change: transform;
-  backface-visibility: hidden;
 }
 
 .project-images img:hover {
@@ -61,19 +60,11 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.back-button:hover,
-.back-button:focus {
+.back-button:hover {
   background-color: var(--green);
   color: #fff;
-  outline: none;
 }
 
-.back-button:focus {
-  outline: 3px solid var(--green);
-  outline-offset: 2px;
-}
-
-/* Seznam v popisu projektu */
 .project-description ul {
   list-style: none; /* odstranění výchozích puntíků */
   padding-left: 0;
@@ -100,7 +91,6 @@
   background-color: var(--green);
   border-radius: 50%;
 }
-
 /* Responzivní úpravy */
 @media (max-width: 480px) {
   .project-detail h1 {
